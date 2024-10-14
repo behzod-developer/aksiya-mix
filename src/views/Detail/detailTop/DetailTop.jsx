@@ -3,12 +3,14 @@ import iphone from '../../../assets/images/iphone15pro.png'
 import blue from '../../../assets/images/iphone15blue.png'
 import gold from '../../../assets/images/iphone15gold.png'
 import silver from '../../../assets/images/iphone15silver.png'
+import MacBro from '../../../assets/images/MacBro.png'
 
 import { FaRegEye } from "react-icons/fa";
 import { TbCalendarTime } from "react-icons/tb";
 import { GoScreenFull } from "react-icons/go";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { GoChevronLeft } from "react-icons/go";
+import DetailShop from '../DetailShop'
 
 
 function DetailTop({ displayHandler }) {
@@ -38,7 +40,7 @@ function DetailTop({ displayHandler }) {
   ]
   useEffect(() => {
 
-    if (ip <= 3 && ip >= 0) {
+    if (ip <= arr.length - 1 && ip >= 0) {
 
       const filtered = arr.filter(item => item.id === ip)
       setData(filtered)
@@ -46,12 +48,9 @@ function DetailTop({ displayHandler }) {
     else {
       setIp((ip) => 0)
     }
-    // console.log(ip)
 
 
 
-
-    console.log(arr.length)
   }, [ip])
 
   return (
@@ -61,8 +60,7 @@ function DetailTop({ displayHandler }) {
       <div className='detailTopLeft'>
 
         <div className='iphone15pro'>
-          {/* onClick={() => setIp((ip) => ip + 1) */}
-          {/* <img className='iphone' src={iphone} onClick={displayHandler} alt="" /> */}
+
           <div className='bigImg'>
             <button className='changeBtnleft' onClick={() => setIp((ip) => ip - 1)}><GoChevronLeft /></button>
             {
@@ -85,10 +83,6 @@ function DetailTop({ displayHandler }) {
           </div>
           <div className='miniphoneconteiner'>
 
-            {/* <img className='miniphone' src={gold} alt="" />
-            <img className='miniphone' src={blue} alt="" />
-            <img className='miniphone' src={blue} alt="" />
-            <img className='miniphone' src={silver} alt="" /> */}
 
             {
               arr && arr.map(item => (
@@ -234,37 +228,6 @@ function DetailTop({ displayHandler }) {
 
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
 
 
@@ -291,6 +254,8 @@ function DetailTop({ displayHandler }) {
         </div>
 
       </div>
+<DetailShop/>
+
 
     </div>
   )

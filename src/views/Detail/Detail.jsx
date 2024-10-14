@@ -41,7 +41,7 @@ function Detail() {
   ]
   useEffect(() => {
 
-    if (ip <= 3 && ip >= 0) {
+    if (ip <= arr.length-1 && ip >= 0) {
 
       const filtered = arr.filter(item => item.id === ip)
       setData(filtered)
@@ -54,7 +54,7 @@ function Detail() {
 
 
 
-    console.log(arr.length)
+    // console.log(arr.length)
   }, [ip])
 
   return (
