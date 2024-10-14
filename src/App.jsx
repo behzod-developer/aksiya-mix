@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import Main from "./views/Main/Main"
 import Detail from "./views/Detail/Detail"
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import MobileCategoryPage from "./container/Categories/MobileCategoryPage";
-import HeaderBottomMenu from "./components/Header/HeaderMenuMobile";
 import Header from "./components/Header/Header";
+import HeaderMenuMobile from "./components/Header/HeaderMenuMobile";
 
 export const Context = createContext()
 
@@ -13,25 +13,15 @@ function App() {
 
   const [language, setLanguage] = useState('uz');
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
-    <Context.Provider value={{ language, setLanguage }}>
+    <Context.Provider value={{ language, setLanguage, showModal, setShowModal, closeModal, openModal }}>
       <Header />
-      {windowWidth > 767 ? <Header /> : <HeaderBottomMenu />}
+      <HeaderMenuMobile />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="detail" element={<Detail />} />

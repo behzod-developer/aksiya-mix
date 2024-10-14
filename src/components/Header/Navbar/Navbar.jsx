@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../Header.css'
 import logo from '../../../assets/logo.png'
 import { IoMenu } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { GoHeart } from "react-icons/go";
+import { Context } from '../../../App';
 
 function Navbar() {
+
+    const { openModal } = useContext(Context);
+
     return (
         <nav className='container'>
             <ul className='nav-pc'>
@@ -42,7 +46,7 @@ function Navbar() {
                     </div>
                 </li>
                 <li className='login-btn'>
-                    <button>Login</button>
+                    <button onClick={openModal}>Login</button>
                 </li>
             </ul>
             <div className="search search-mobile">
