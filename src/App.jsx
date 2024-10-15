@@ -23,13 +23,12 @@ function App() {
       <Header />
       <HeaderMenuMobile />
       <Routes>
-        <Route path="/" element={<Main />} />
         <Route path="detail" element={<Detail />} />
 
         <Route path="/categories" element={<MobileCategoryPage />} />
         <Route path="/best-ads" element={<h1>Лучшие объявления</h1>} />
         <Route path="/discounts-start" element={<h1>Объявления о начале скидки</h1>} />
-        <Route path="/for-you" element={<h1>для тебя</h1>} />
+        <Route path="/" element={<Main />} />
         <Route path="/discounts-nearby" element={<h1>Скидки рядом</h1>} />
         <Route path="/recent-ads" element={<h1>Последние просмотренные объявления</h1>} />
         <Route path="/paused-ads" element={<h1>Остановленные объявления</h1>} />

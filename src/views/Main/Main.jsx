@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Banner from '../../container/Banner/BannerHeader/Banner';
 import './Main.css'
+import Card from '../../components/Cards/Card';
 
 function Main() {
     const { t } = useTranslation()
@@ -12,8 +13,8 @@ function Main() {
                 <div className="main-banner">
                     <Banner />
                 </div>
-                <div className="container">
-                    <h1>{t('welcome')}</h1>
+                <div className="">
+                    <Card />
                 </div>
             </main>
         </div>
