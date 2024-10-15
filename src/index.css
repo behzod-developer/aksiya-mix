@@ -364,6 +364,9 @@ h2 {
   font-size: 12px;
   font-weight: 400;
   color:rgba(148, 163, 184, 1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .MacBro {
@@ -463,4 +466,47 @@ color: red;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.detail-top-data-like{
+  display: flex;
+  width: 269px;
+  height: 48px;
+  gap: 8px;
+}
+.like-left{
+  width: 135px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: rgba(248, 250, 252, 1);
+  display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.like-dislike{
+  width: 111px;
+  height: 24px;
+  display: flex;
+  gap: 20px;
+}
+.like-count{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 111px;
+border-right: 1px solid grey;
+padding-right: 5px;
+}
+.like-count > h1{
+  font-size: 14px;
+  font-weight: 500;
+}
+.complaint{
+  font-size: 16px;
+  font-weight: 400;
+}
+.exclamation{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }

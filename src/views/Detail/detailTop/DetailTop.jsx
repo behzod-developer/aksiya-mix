@@ -4,6 +4,8 @@ import blue from '../../../assets/images/iphone15blue.png'
 import gold from '../../../assets/images/iphone15gold.png'
 import silver from '../../../assets/images/iphone15silver.png'
 import MacBro from '../../../assets/images/MacBro.png'
+import up from '../../../assets/images/thumb-up.png'
+import down from '../../../assets/images/thumb-down.png'
 
 import { FaRegEye } from "react-icons/fa";
 import { TbCalendarTime } from "react-icons/tb";
@@ -11,6 +13,7 @@ import { GoScreenFull } from "react-icons/go";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { GoChevronLeft } from "react-icons/go";
 import DetailShop from '../DetailShop'
+import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 
 function DetailTop({ displayHandler }) {
@@ -251,8 +254,58 @@ function DetailTop({ displayHandler }) {
 
           </div>
 
-        </div>
 
+<div className="detail-top-data-like">
+
+
+<div className="like-left">
+
+
+<div className="like-dislike">
+
+    <div className='like-count'>
+
+<img src={up} alt="" />
+
+<h1>1 200</h1>
+
+    </div>
+
+<img src={down} alt="" />
+</div>
+
+</div>
+
+<div className="like-left">
+
+<HiOutlineExclamationCircle className='exclamation' />
+<h1 className='complaint'>
+Жалоба
+</h1>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
       </div>
 <DetailShop/>
 

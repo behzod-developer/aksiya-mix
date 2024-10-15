@@ -1,6 +1,9 @@
 import React from 'react'
 import MacBro from '../../assets/images/MacBro.png'
 import { HiStar } from "react-icons/hi";
+import { IoIosMan } from "react-icons/io";
+import profile from '../../assets/images/profile.png'
+import heart from '../../assets/images/heart.png'
 
 function DetailShop() {
     return (
@@ -36,10 +39,11 @@ function DetailShop() {
                 <div className="MacBroText">
 
                     <h2>
-                        11.2 тыс.
+                      <img src={profile} alt="" /> 11.2 тыс.
                     </h2>
 
                     <h2>
+                        <img src={heart} alt="" />
                         120
                     </h2>
 
