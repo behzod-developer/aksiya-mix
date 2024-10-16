@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import Header from '../../components/Header/Header'
 import { useTranslation } from 'react-i18next'
-import Banner from '../../container/Banner/BannerHeader/Banner';
-import './Main.css'
-import Card from '../../components/Cards/Card';
 
 function Main() {
-    const { t } = useTranslation()
-
-    return (
-        <div className='main'>
-            <main className='container'>
-                <div className="main-banner">
-                    <Banner />
-                </div>
-                <div className="">
-                    <Card />
-                </div>
-            </main>
-        </div>
-    )
+    const {t} = useTranslation()
+  return (
+    <div className='main'>
+            <Header />
+            <div className="container">
+                <h1>{t('welcome')}</h1>
+            </div>
+    </div>
+  )
 }
 
 export default Main
