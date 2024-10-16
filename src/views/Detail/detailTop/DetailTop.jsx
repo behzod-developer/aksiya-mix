@@ -293,18 +293,6 @@ function DetailTop({ displayHandler }) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
 <DetailShop/>
